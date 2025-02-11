@@ -39,7 +39,7 @@ loop() ->
             Client ! {result, Result},
             loop();
         {Client, multiply, NumberList} ->
-            Result = lists:foldl(fun(X, Prod) -> X * Prod end, 1, NumberList),  % Changed initial value from 0 to 1
+            Result = lists:foldl(fun(X, Prod) -> X * Prod end, 1, NumberList),
             Client ! {result, Result},
             loop();
         {Client, divide, [Head|Tail]} ->
@@ -52,7 +52,7 @@ loop() ->
                     Client ! {result, Result},
                     loop()
             end;
-        {Client, sub, [Head|Tail]} ->  % Fixed subtraction logic
+        {Client, sub, [Head|Tail]} ->
             Result = lists:foldl(fun(X, Acc) -> Acc - X end, Head, Tail),
             Client ! {result, Result},
             loop();

@@ -1,0 +1,33 @@
+If you run $ follow by any ASCII-friendly character, it will print out the ASCII base 10 value of the character
+
+For example : $n will print 110
+
+However, if you do [$E, $x], it will print "Ex"
+
+Understanding $ in Erlang:
+- The $ operator converts a character to its integer (ASCII) representation
+- Single character: $a returns 97 (the ASCII value)
+- Multiple characters in a list: [$H, $i] creates the string "Hi"
+
+More examples:
+$A -> 65
+$1 -> 49
+[$H, $e, $y] -> "Hey"
+
+Key difference:
+- Single $ returns numeric ASCII value
+- List of $ characters [$ , $ ] creates a string
+
+Additional ASCII Operations:
+--------------------------
+Converting between ASCII and characters:
+- list_to_integer(String) : converts string to number
+- integer_to_list(Number) : converts number to string
+
+Common ASCII Values:
+- Space: $\s (32)
+- Newline: $\n (10)
+- Tab: $\t (9)
+- Numbers: $0-$9 (48-57)
+- Uppercase: $A-$Z (65-90)
+- Lowercase: $a-$z (97-122)

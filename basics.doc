@@ -1,52 +1,44 @@
-Here you can find some basics informations about the syntax or the functions that i commonly use:
+Here you can find some basics information about Erlang syntax and common patterns:
 
 Notes : 
 - The most used case to program in erlang is snake_case
-- Installing the Erlang language extension by Pierrick Gourlain is recommended as it provides
-lots of informations about the functions / adds color
+- Installing the Erlang language extension by Pierrick Gourlain is recommended
 
 ---------------------------------------------------------------------------------------------------------------------
 
-How to declare a module : -module(name_of_your_module). It allows you to create a public "instance" of your code
+Module Declaration:
+-module(name_of_your_module).
 
-Inside your module, you have functions. Which have different numbers of arguments.
-For example, lets take this function called "start": -export([start/0]).
-
-The -export flag is pretty self explanatory, inside we can find the name of our function "start" and a "/0"
-And the /0 represents the number of arguments our function takes.
-For example, if our function was to take 2 arguments, it would be like this: -export([start/2]) :D
-
----------------------------------------------------------------------------------------------------------------------
-
-String manipulation :
-
-How to print variables : io:format("your string").
-It allows you to print any variable / string of your choice
-
-If you wish you can concat variables using the following functions:
-string:concat(Str, "\n"). You can use ++ too, like this: Str ++ "\n".
-
-Now onto value matching:
+Function Export:
+-export([function_name/arity]).
+Example: -export([start/0]) for a function with no arguments
+        -export([print/1]) for a function with one argument
 
 ---------------------------------------------------------------------------------------------------------------------
 
-Function argument verification :
+Basic Syntax:
 
-In Erlang, there's a simple way to ensure that the function only starts when there are arguments.
-It's with the "when" keyword. Like this :
+String manipulation:
+io:format("your string").
+string:concat(Str1, Str2).
+Str1 ++ Str2
 
-function(argument) when argument ->
-
-You can also call a function as a condition to make the function work
-
-function(argument) when is_argument_valid(argument)
+Basic Operators:
+/ (divide)
+* (multiply)
+- (subtract)
++ (add)
+% (remainder)
 
 ---------------------------------------------------------------------------------------------------------------------
 
-Here are some Operators :
+For more detailed information about specific concepts, please check the documentation in each feature folder:
+- /src/valuematching/ : Pattern matching and variable binding
+- /src/print/ : Output and formatting
+- /src/ascii/ : ASCII manipulation
+- /src/changecase/ : String case manipulation
+- /src/calculus/ : Server that can do calcs with basic operators and unlimited numbers
 
-Divide : /
-Multiply : *
-Substract : -
-Add : +
-Rem, module : %
+See official documentation: https://www.erlang.org/doc/system/data_types.html
+
+See "saleyn"s GitHub repository, contains lots of info on everything surrounding the language

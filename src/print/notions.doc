@@ -1,0 +1,25 @@
+Print Module Documentation
+------------------------
+
+The print module provides functions for formatting and outputting text in Erlang.
+
+Basic Usage:
+c(print).
+print:start("hey").
+
+Advanced Formatting:
+- io:format("~p", [Value]) : prints any Erlang term
+- io:format("~s", [String]) : prints string
+- io:format("~w", [Term]) : prints terms in standard syntax
+- io:format("~n") : prints newline
+
+Format Specifiers:
+~p - pretty printing
+~w - write
+~s - string
+~n - newline
+~B - binary
+~f - float
+
+Example:
+io:format("Number: ~p, String: ~s~n", [42, "hello"])

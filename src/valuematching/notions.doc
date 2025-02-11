@@ -10,3 +10,18 @@ But if i want to change the variable "Me" to another value, i wont be able to
 Me = 5 + 6.
 is impossible
 
+This is because Erlang uses "single assignment variables" - once a variable is bound, it cannot be rebound in the same context.
+
+However, you can use the same variable name in different function calls or pattern matches:
+
+factorial(0) -> 1;
+factorial(N) -> N * factorial(N-1).
+
+Each N is a new variable, despite having the same name.
+
+You can also use pattern matching with compound data structures:
+
+{X, Y} = {1, 2}.
+[Head|Tail] = [1,2,3].
+
+The = operator in Erlang is not an assignment operator, but a pattern matching operator.
