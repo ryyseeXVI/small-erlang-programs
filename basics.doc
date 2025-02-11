@@ -6,6 +6,16 @@ Notes :
 
 ---------------------------------------------------------------------------------------------------------------------
 
+Installation:
+
+Ubuntu: sudo apt-get install erlang
+Fedora: sudo dnf install erlang
+
+---------------------------------------------------------------------------------------------------------------------
+
+Opening the CLI:
+Write "erl" in the terminal
+
 Module Declaration:
 -module(name_of_your_module).
 
