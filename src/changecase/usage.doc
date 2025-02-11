@@ -1,0 +1,4 @@
+c(changecaseserver).
+c(changecaseclient).
+ChangeCaseServer = changecaseserver:start().
+changecaseclient:changecase(ChangeCaseServer, "salut", uppercase).

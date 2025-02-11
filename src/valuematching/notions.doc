@@ -1,0 +1,12 @@
+If you declare a variable to a value, you're not allowed to change it to another.
+
+For example:
+
+Me = 5 + 5.
+Output : 10
+
+But if i want to change the variable "Me" to another value, i wont be able to
+
+Me = 5 + 6.
+is impossible
+

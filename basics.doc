@@ -1,0 +1,52 @@
+Here you can find some basics informations about the syntax or the functions that i commonly use:
+
+Notes : 
+- The most used case to program in erlang is snake_case
+- Installing the Erlang language extension by Pierrick Gourlain is recommended as it provides
+lots of informations about the functions / adds color
+
+---------------------------------------------------------------------------------------------------------------------
+
+How to declare a module : -module(name_of_your_module). It allows you to create a public "instance" of your code
+
+Inside your module, you have functions. Which have different numbers of arguments.
+For example, lets take this function called "start": -export([start/0]).
+
+The -export flag is pretty self explanatory, inside we can find the name of our function "start" and a "/0"
+And the /0 represents the number of arguments our function takes.
+For example, if our function was to take 2 arguments, it would be like this: -export([start/2]) :D
+
+---------------------------------------------------------------------------------------------------------------------
+
+String manipulation :
+
+How to print variables : io:format("your string").
+It allows you to print any variable / string of your choice
+
+If you wish you can concat variables using the following functions:
+string:concat(Str, "\n"). You can use ++ too, like this: Str ++ "\n".
+
+Now onto value matching:
+
+---------------------------------------------------------------------------------------------------------------------
+
+Function argument verification :
+
+In Erlang, there's a simple way to ensure that the function only starts when there are arguments.
+It's with the "when" keyword. Like this :
+
+function(argument) when argument ->
+
+You can also call a function as a condition to make the function work
+
+function(argument) when is_argument_valid(argument)
+
+---------------------------------------------------------------------------------------------------------------------
+
+Here are some Operators :
+
+Divide : /
+Multiply : *
+Substract : -
+Add : +
+Rem, module : %
